@@ -22,4 +22,4 @@ master是一个说明分支，这里只存放README
 #### 参与贡献
 
 1.  alexander_zyz
-2.  新建 Feat_xxx 分支
+2.  captainzw
