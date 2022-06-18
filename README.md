@@ -2,10 +2,10 @@
 
 #### 介绍
 Maybe you can find all answers you want here.<br>
-Live in USTB
+Live in XXXX
 
 #### 仓库目的
-记录在USTB本科四年里的作业，供需要的人们（后来的人们）参考借阅
+记录在XXXX本科四年里的时光，仅供需要的人们（后来的人们）参考借阅
 
 
 #### 非贡献者使用教程
