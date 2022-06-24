@@ -1,0 +1,10 @@
+x=linspace(0,20*pi,200);
+x=t.*cos(pi.*t./6);
+y=t.*sin(pi.*t./6);
+z=2.*t;
+plot3(x,y,z);
+xlabel("x","FontSize",18);
+ylabel("y","FontSize",18);
+zlabel("z","FontSize",18);
+legend("圆锥螺线","FontSize",15)
+title("圆锥螺线的图像","FontSize",22)
