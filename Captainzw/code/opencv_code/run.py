@@ -5,9 +5,9 @@ import time,json
 
 
 # 三元素（iot后台获取）
-ProductKey = 'h5bfhHguf8e'
-DeviceName = 'raspberry'
-DeviceSecret = "e26c9bdfab750297fd19377bf2310c5e"
+ProductKey = ''
+DeviceName = ''
+DeviceSecret = ""
 # topic (iot后台获取)
 POST = '/sys/h5bfhHguf8e/raspberry/thing/event/property/post'  # 上报消息到云
 POST_REPLY = '/sys/h5bfhHguf8e/raspberry/thing/event/property/post_reply'
