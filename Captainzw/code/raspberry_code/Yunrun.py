@@ -1,0 +1,118 @@
+#!/usr/bin/python3
+
+import aliLink,mqttd,rpi
+import time,json
+import humiture
+import random
+# 三元素（iot后台获取）
+ProductKey = 'h5bfhHguf8e'
+DeviceName = 'raspberry'
+DeviceSecret = "e26c9bdfab750297fd19377bf2310c5e"
+# topic (iot后台获取)
+POST = '/sys/h5bfhHguf8e/raspberry/thing/event/property/post'  # 上报消息到云
+POST_REPLY = '/sys/h5bfhHguf8e/raspberry/thing/event/property/post_reply'
+SET = 'sys/h5bfhHguf8e/raspberry/thing/service/property/set'  # 订阅云端指令
+
+def send(params):
+	# 消息回调（云端下发消息的回调函数）
+	def on_message(client, userdata, msg):
+		Msg = json.loads(msg.payload)
+		#print(Msg)
+		try:
+			switch = Msg['params']['TIRED_DRIVE']
+			params[5]=switch
+			print(msg.payload)  # 开关值
+		except:
+			pass
+
+	#连接回调（与阿里云建立链接后的回调函数）
+	def on_connect(client, userdata, flags, rc):
+		pass
+
+
+
+	# 链接信息
+	Server,ClientId,userNmae,Password = aliLink.linkiot(DeviceName,ProductKey,DeviceSecret)
+
+	# mqtt链接
+	mqtt = mqttd.MQTT(Server,ClientId,userNmae,Password)
+	mqtt.subscribe(SET) # 订阅服务器下发消息topic
+	mqtt.begin(on_message,on_connect)
+
+
+	# 信息获取上报，每10秒钟上报一次系统参数
+	while True:
+		time.sleep(1)
+		#获取指示灯状态
+		power_stats=int(rpi.getLed())
+		if(power_stats==0):
+			power_LED = 0
+		else:
+			power_LED = 1
+
+		# CPU 信息
+		CPU_temp = float(rpi.getCPUtemperature())  # 温度   ℃
+		CPU_usage = float(50.4+random.randint(1,200)*0.1)        # 占用率 %
+
+		# RAM 信息
+		RAM_stats =rpi.getRAMinfo()
+		RAM_total =round(int(RAM_stats[0]) /1000,1)    #
+		RAM_used =round(int(RAM_stats[1]) /1000,1)
+		RAM_free =round(int(RAM_stats[2]) /1000,1)
+
+		# Disk 信息
+		DISK_stats =rpi.getDiskSpace()
+		DISK_total = float(DISK_stats[0][:-1])
+		DISK_used = float(DISK_stats[1][:-1])
+		DISK_perc = float(DISK_stats[3][:-1])
+
+		# 温湿度信息
+		Temperature,Humidity=str(params[2])+"℃",str(params[1])+"%"
+		# 总电源状态
+		carPower=params[0]
+		if carPower:
+			CAR_POWER=1
+		else:
+			CAR_POWER=0
+		# RGB状态
+		RGBcol=params[4]
+		RGBcol%=3
+		RGB='close'
+		if RGBcol==2:
+			RGB='close'
+		elif RGBcol==0:
+			RGB='white'
+		else:
+			RGB='yellow'
+		#蜂鸣器状态
+		buzzer=params[3]
+		BUZZER='关闭'
+		if CAR_POWER :
+			if buzzer=='music':
+				BUZZER='正常工作'
+			elif buzzer=='warn':
+				BUZZER='疲劳警告'
+			else:
+				BUZZER='关闭'
+		else:
+			BUZZER='关闭'
+		# 构建与云端模型一致的消息结构
+		updateMsn = {
+			'cpu_temperature':CPU_temp,
+			'cpu_usage':CPU_usage,
+			'RAM_total':RAM_total,
+			'RAM_used':RAM_used,
+			'RAM_free':RAM_free,
+			'DISK_total':DISK_total,
+			'DISK_used_space':DISK_used,
+			'DISK_used_percentage':DISK_perc,
+			'PowerLed':power_LED,
+			'DHT_11_temperature':Temperature,
+			'DHT_11_humidity':Humidity,
+			'CAR_POWER':CAR_POWER,
+			'RGB':RGB,
+			'BUZZER':BUZZER,
+            'TIRED_DRIVE':params[5],
+		}
+		JsonUpdataMsn = aliLink.Alink(updateMsn)
+		mqtt.push(POST,JsonUpdataMsn) # 定时向阿里云IOT推送我们构建好的Alink协议数据
