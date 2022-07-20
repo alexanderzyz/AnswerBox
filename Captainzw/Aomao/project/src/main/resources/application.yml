@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ampro
+    username: root
+    password: zw20021225
+    type: com.alibaba.druid.pool.DruidDataSource

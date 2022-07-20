@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>sukin_品牌馆-澳猫团</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/brand.css">
+	<style>
+		.orderNum {
+			background-color: red;
+			border-radius: 5px;
+			border-bottom-left-radius: 0px;
+			width: 14px;
+			height: 12px;
+			text-align: center;
+			line-height: 12px;
+		}
+	</style>
+</head>
+
+<body>
+	<header class="wrap-all">
+		<div class="head center_1200">
+			<!-- 头部左边 -->
+			<div class="headLeft">
+				<div class="hello">
+					<a href="#">
+						<em></em>
+						<span>澳猫首页</span>
+						<span>嗨，澳猫欢迎你！</span>
+					</a>
+				</div>
+				<div class="user">
+					尊敬的用户-<span id="username"></span>
+				</div>
+				<div class="phone">
+					<a href="#">
+						<em></em>
+						<span>手机逛澳猫</span>
+					</a>
+				</div>
+			</div>
+			<!-- 头部右边 -->
+			<!-- 头部右边 -->
+			<div class="headRight">
+				<ul>
+					<li><a id="myOrder">我的购物车</a><span class="orderNum">1</span></li><span>|</span>
+					<li class="erWrap">
+						<strong></strong>
+						<a href="#">个人中心</a>
+						<em></em>
+						<p class="headEr">
+							<a href="#">我的优惠券</a>
+							<a href="#">账户安全</a>
+							<a class="last" href="#">售后管理</a>
+						</p>
+					</li>
+					<span>|</span>
+					<li class="erWrap">
+						<a href="#">客户服务</a>
+						<em></em>
+						<p class="headEr">
+							<a href="#">联系客服</a>
+							<a href="#">购物指南</a>
+							<a href="#">下单与配送</a>
+							<a href="#">售后服务</a>
+							<a href="#">商家服务</a>
+							<a class="last" href="#">帮助中心</a>
+						</p>
+					</li>
+					<span>|</span>
+					<li class="erWrap">
+						<a href="#">消费者告知书</a>
+					</li>
+					<span>|</span>
+					<li class="erWrap">
+						<a href="#">收藏夹</a>
+						<em></em>
+						<p class="headEr different">
+							<a href="#">收藏的宝贝</a>
+							<a class="last" href="#">收藏的品牌</a>
+						</p>
+					</li>
+					<span>|</span>
+					<li class="erWrap">
+						<a href="#">帮助中心</a>
+						<em></em>
+						<p class="headEr">
+							<a href="#">海外正品</a>
+							<a href="#">服务保障</a>
+							<a href="#">关税&清关</a>
+							<a class="last" href="#">身份证报关</a>
+						</p>
+					</li><span>|</span>
+					<li class="er_warp">
+						<a href="#">网站导航</a>
+						<em></em>
+						<div class="headEr clearfix">
+							<div class="er_area">
+								<h5>营养保健</h5>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=维生素&crossStore=true">维生素</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=矿物质&crossStore=true">矿物质</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=鱼油&crossStore=true">鱼油</a>
+								<a href="#">降糖</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=维生素&crossStore=true">维生素</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=矿物质&crossStore=true">矿物质</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=鱼油&crossStore=true">鱼油</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=蜂胶&crossStore=true">蜂胶</a>
+								<a href="#">蜂蜜</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=前列腺&crossStore=true">前列腺</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=强精&crossStore=true">强精</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=补肾&crossStore=true">补肾</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=护肝&crossStore=true">护肝</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=护眼&crossStore=true">护眼</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=职场&crossStore=true">其他</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=维骨力&crossStore=true">维骨力</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=高钙奶粉&crossStore=true">高钙奶粉</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=养心&crossStore=true">养心</a>
+							</div>
+							<div class="er_area">
+								<h5>母婴特卖</h5>
+								<a href="#">奶粉</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=孕前备孕&crossStore=true">孕前备孕</a>
+								<a href="#">辅食</a>
+								<a href="#">驱蚊</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=孕期营养&crossStore=true">孕期营养</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=孕前备孕&crossStore=true">孕前备孕</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=哺乳期&crossStore=true">哺乳期</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=营养品&crossStore=true">营养品</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=抗感冒/止咳&crossStore=true">抗感冒/止咳</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=辅食代餐&crossStore=true">辅食代餐</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=零食&crossStore=true">零食</a>
+								<a target="_blank" href="http://www.aumalls.com/Store/Search/?q=奶粉1段&crossStore=true">1段
+									0-6个月</a>
+								<a target="_blank" href="http://www.aumalls.com/Store/Search/?q=奶粉2段&crossStore=true">2段
+									6-12个月</a>
+								<a target="_blank" href="http://www.aumalls.com/Store/Search/?q=奶粉3段&crossStore=true">3段
+									1-3岁</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=奶粉4段&crossStore=true">4段 3-6岁</a>
+								<a target="_blank" href="#">洗漱</a>
+								<a target="_blank" href="http://www.aumalls.com/Store/Search/?q=奶粉2段&crossStore=true">2段
+									6-12个月</a>
+								<a target="_blank" href="#">护肤</a>
+								<a target="_blank" class="last" href="#">驱蚊</a>
+							</div>
+							<div class="er_area">
+								<h5>魅力女性</h5>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=补气养血&crossStore=true">补气养血</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=排毒养颜&crossStore=true">排毒养颜</a>
+								<a href="#">洗液</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=排毒养颜&crossStore=true">排毒养颜</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=完美身材&crossStore=true">完美身材</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=胶原蛋白&crossStore=true">胶原蛋白</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=补气养血&crossStore=true">补气养血</a>
+								<a target="_blank" href="#">卫生巾</a>
+								<a target="_blank" class="last" href="#">洗液</a>
+							</div>
+							<div class="er_area">
+								<h5>美妆个护</h5>
+								<a href="#">面部</a>
+								<a href="#">防嗮</a>
+								<a href="#">祛斑祛痘</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=面部洗护&crossStore=true">面部洗护</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=眼部护理&crossStore=true">眼部护理</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=唇部护理&crossStore=true">唇部护理</a>
+								<a target="_blank" class="last" href="#">祛斑祛痘</a>
+								<a target="_blank" href="#">手足洗护</a>
+								<a target="_blank" class="cAEE"
+									href="http://www.aumalls.com/Store/Search/?q=眼部护理/&crossStore=true">眼部护理</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=防晒修复&crossStore=true">防晒修复</a>
+							</div>
+							<div class="er_area">
+								<h5>个人洗护</h5>
+								<a href="#">沐浴</a>
+								<a href="#">洗发</a>
+								<a href="#">消毒液</a>
+								<a href="#">洗洁精</a>
+								<a target="_blank"
+									href="http://www.aumalls.com/Store/Search/?q=消毒液&crossStore=true">消毒液</a>
+								<a target="_blank" class="last"
+									href="http://www.aumalls.com/Store/Search/?q=洗洁精&crossStore=true">洗洁精</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!-- logo和搜索部分 -->
+	<div class="logo_wrap">
+		<div class="logo_header clearfix center_1200">
+			<!-- logo -->
+			<div class="logo">
+				<a href="index.html">澳猫团</a>
+			</div>
+			<div class="shops">
+				<img src="../images/sukin_brandl.png" height="45" width="181" alt="a2海外品牌店">
+			</div>
+			<div class="logo_phone">
+				<p>
+					手机逛
+				</p>
+				<p>
+					<i></i>
+					<b></b>
+				</p>
+				<p>
+					<img src="../images/AppEr.png" height="92" width="92" alt="">
+				</p>
+			</div>
+			<!-- 搜索 -->
+			<div class="search">
+				<div class="txt">
+					<input class="SearchBttonValue" type="text" placeholder="Swisse/澳洲">
+				</div>
+				<a class="SearchBtton btn" href="#">
+					搜索
+				</a>
+				<div class="hot_search">
+					<em>热门搜索：</em>
+					<span><a target="_blank" href="#">胶原蛋白</a></span>
+					<span><a target="_blank" href="#">叶绿素</a></span>
+					<span><a target="_blank" href="#">睡眠片</a></span>
+					<span><a target="_blank" href="#">儿童维生素</a></span>
+					<span><a target="_blank" href="#">鱼肝油</a></span>
+					<span><a target="_blank" href="#">保健品</a></span>
+					<span><a target="_blank" href="#">美容</a></span>
+					<span><a target="_blank" href="#">运动保健</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- logo和搜索部分下面的sukin品牌馆的logo -->
+	<div class="sukin_store">
+		<div class="center_1200">
+			<a href="#" target="_blank"><img src="../images/sukin-logo.png" alt="sukin品牌馆的商店"></a>
+		</div>
+		<!--导航-->
+		<div class="center_1200 clearfix">
+			<div class="nav">
+				<ul class="clearfix">
+					<li>
+						<a href="" target="_blank">
+							首页
+							<span><img src="../images/nav_bj.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							全部商品
+							<span><img src="../images/nav_bj.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							热门推荐
+							<span><img src="../images/nav_bj.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							品牌故事
+							<span><img src="../images/nav_bj.png" alt=""></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!--导航右侧的搜索框-->
+			<div class="search_box clearfix">
+				<div class="search_txt">
+					<input class="Searchstore" type="text" placeholder="本店搜索">
+				</div>
+				<a class="search_icon"><img src="../images/search_icon.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+	<!-- 导航下边的3个模块立即抢购商品 -->
+	<div class="center_1200">
+		<ul class="hotPro clearfix">
+			<li>
+				<a href="#" target="_blank">
+					<div class="pro_box">
+						<img src="../images/sukin_1.png" alt="热门推荐产品1">
+					</div>
+					<div class="move_box clearfix">
+						<div class="move_boxL">
+							<p>SukinFacialScrab面部磨砂膏</p>
+							<p><em>￥</em><em>40</em><em>.00</em></p>
+						</div>
+						<div class="move_boxR">
+							立即抢购
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank">
+					<div class="pro_box">
+						<img src="../images/sukin_2.png" alt="热门推荐产品1">
+					</div>
+					<div class="move_box clearfix">
+						<div class="move_boxL">
+							<p>SukinFacialScrab面部磨砂膏</p>
+							<p><em>￥</em><em>40</em><em>.00</em></p>
+						</div>
+						<div class="move_boxR">
+							立即抢购
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#" target="_blank">
+					<div class="pro_box">
+						<img src="../images/sukin_3.png" alt="热门推荐产品1">
+					</div>
+					<div class="move_box clearfix">
+						<div class="move_boxL">
+							<p>SukinFacialScrab面部磨砂膏</p>
+							<p><em>￥</em><em>40</em><em>.00</em></p>
+						</div>
+						<div class="move_boxR">
+							立即抢购
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 商品  WHY-->
+	<div class="sukin_main_product">
+		<!-- 商品区域 -->
+		<div class="center_1200">
+			<div class="sales_product">
+				<ul class="sales_small sukin_sales clearfix">
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_1.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>消毒 呵护双手</p>
+								<p>Sukin HandWash洗手液 250ml</p>
+								<p><strong><em>47</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_2.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>天然蛋白滋养</p>
+								<p>Sukin Conditioner护发素 250ml</p>
+								<p><strong><em>40</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_3.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>呵护头皮 补水保湿</p>
+								<p>Sukin Shampoo洗发水 250ml</p>
+								<p><strong><em>40</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_4.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>美白淡斑 延缓衰老</p>
+								<p>Sukin RoseHipOil玫瑰果油 25ml</p>
+								<p><strong><em>112</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_5.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>深层修复滋养 保护唇部</p>
+								<p>Sukin 极致修复滋养润唇膏 10ml</p>
+								<p><strong><em>35</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_6.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>修复肌肤 滋养保湿</p>
+								<p>Sukin FacialMoisturiser润肤霜 125ml</p>
+								<p><strong><em>45</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_7.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>天然保湿 锁水修复</p>
+								<p>Sukin NightCream晚霜 120ml</p>
+								<p><strong><em>78</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_8.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>天然有机 抗氧化</p>
+								<p>Sukin EyeSerum眼霜 30ml</p>
+								<p><strong><em>77</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_9.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>补水保湿 滋润淡斑</p>
+								<p>Sukin DayCream日霜 120ml</p>
+								<p><strong><em>85</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_10.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>紧致肌肤 清洁毛孔</p>
+								<p>Sukin Facial Masque 面膜 100ml</p>
+								<p><strong><em>65</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_11.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>天然有机 保湿补水</p>
+								<p>Sukin BodyLotion润肤乳液 250ml</p>
+								<p><strong><em>53</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_12.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>去除角质 靓丽肌肤</p>
+								<p>Sukin FacialScrab面部磨砂膏 125ml</p>
+								<p><strong><em>40</em>.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_13.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>深层清洁 平衡油脂</p>
+								<p>Sukin FoamingCleanser洁面泡沫 125ml</p>
+								<p><strong>40.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_14.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>淡化痘印 美白祛斑</p>
+								<p>Sukin AvoeVeraGEL芦荟胶 125ml</p>
+								<p><strong>40.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_15.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>保湿补水 舒缓修复</p>
+								<p>Sukin MistToner保湿喷雾 125ml</p>
+								<p><strong>40.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="turnTo">
+							<div class="sales_pic">
+								<img src="../images/hot_16.jpg" alt="">
+							</div>
+							<div class="sales_txt">
+								<p>舒缓、镇静肌肤</p>
+								<p>Sukin BodyWash沐浴露 500ml</p>
+								<p><strong>203.00</strong><span>立即抢购</span></p>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 水墨画区域 -->
+	<div class="wash_box center_1200">
+		<ul class="clearfix">
+			<li><a href="#" target="_blank"><img src="../images/wash_1.png" height="300" width="364" alt=""></a></li>
+			<li><a href="#" target="_blank"><img src="../images/wash_2.png" height="300" width="364" alt=""></a></li>
+			<li><a href="#" target="_blank"><img src="../images/wash_3.png" height="300" width="364" alt=""></a></li>
+		</ul>
+	</div>
+	<!-- 底部 -->
+	<div class="foot">
+		<!-- 保证 -->
+		<div class="BZ center_1200 textWarp">
+			<ul class="footer_bg clearfix">
+				<a class="first" href="http://www.aumalls.com/oversea">
+					<div class="icon"></div>
+					<p>100% 正品保障</p>
+				</a>
+				<a class="two" href="http://www.aumalls.com/oversea">
+					<div class="icon"></div>
+					<p>100% 海外进口</p>
+				</a>
+				<a class="three" href="http://www.aumalls.com/Logistics">
+					<div class="icon"></div>
+					<p>100% 极速发货</p>
+				</a>
+				<a class="four" href="http://www.aumalls.com/afterRules">
+					<div class="icon"></div>
+					<p>100% 无忧售后</p>
+				</a>
+			</ul>
+		</div>
+		<!-- 信息 -->
+		<div class="information center_1200 textWarp">
+			<div class="IRight">
+				<span class="Iphone">
+					<em></em>
+					<strong>澳猫客服热线：</strong>
+				</span>
+				<span class="num c065">400-115-8086</span>
+				<span class="time c065">工作时间：09:00-24:00(周一至周日)</span>
+				<span class="email">澳猫邮箱：customer@aumalls.net</span>
+			</div>
+			<div class="ICenter">
+				<div class="ICenW">
+					<dl>
+						<dt><a target="_blank" href="#">购物指南</a></dt>
+						<dd><a target="_blank" href="#">· 购物流程</a></dd>
+						<dd><a target="_blank" href="#">· 购物须知</a></dd>
+						<dd><a target="_blank" href="#">· 免费注册</a></dd>
+						<dd><a target="_blank" href="#">· 品牌大全</a></dd>
+						<dd><a target="_blank" href="#">· 常见问题</a></dd>
+					</dl>
+					<dl>
+						<dt><a target="_blank" href="#">帮助中心</a></dt>
+						<dd><a target="_blank" href="#">· 帮助中心</a></dd>
+						<dd><a target="_blank" href="#">· 海外正品</a></dd>
+						<dd><a target="_blank" href="#">· 服务保障</a></dd>
+						<dd><a target="_blank" href="#">· 关税&清关</a></dd>
+						<dd><a target="_blank" href="#">· 身份证报关</a></dd>
+					</dl>
+					<dl>
+						<dt><a target="_blank" href="">下单与配送</a></dt>
+						<dd><a target="_blank" href="#">· 关于价格</a></dd>
+						<dd><a target="_blank" href="#">· 关于支付</a></dd>
+						<dd><a target="_blank" href="#">· 关于物流</a></dd>
+						<dd><a target="_blank" href="#">· 关于优惠券</a></dd>
+						<dd><a target="_blank" href="#">· 物流跟踪</a></dd>
+					</dl>
+					<dl>
+						<dt><a target="_blank" href="#">售后服务</a></dt>
+						<dd><a target="_blank" href="#">· 售后规则</a></dd>
+						<dd><a target="_blank" href="#">· 退货政策</a></dd>
+						<dd><a target="_blank" href="#">· 退货流程</a></dd>
+						<dd><a target="_blank" href="#">· 退款说明</a></dd>
+						<dd><a target="_blank" href="#">· 联系客服</a></dd>
+					</dl>
+					<dl class="MRn">
+						<dt><a target="_blank" href="#">商家服务</a></dt>
+						<dd><a target="_blank" href="#">· 平台规则</a></dd>
+						<dd><a target="_blank" href="#">· 国际招商</a></dd>
+						<dd><a target="_blank" href="#">· 商家入驻</a></dd>
+						<dd><a target="_blank" href="#">· 商家中心</a></dd>
+						<dd><a target="_blank" href="#">· 联系我们</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div class="Ileft">
+				<div class="er">
+					<div class="erPic">
+						<img src="../images/WXe.png" alt="二维码">
+					</div>
+					<span>扫码下载澳猫APP</span>
+				</div>
+				<div class="fen">
+					<a class="weixin" href="#">
+						<em></em>
+						<span>aumalls</span>
+						<div class="WXer">
+							<p>新鲜好玩的<br>
+								澳洲货推荐<br>
+								<strong>扫码加微信</strong>
+							</p>
+							<div class="wxe">
+								<img src="../images/WXe.png" alt="二维码">
+							</div>
+						</div>
+					</a>
+					<a class="sina" href="#">
+						<em></em>
+						<span>澳猫新浪微博</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="up">
+			<div class="txt textWarp  w1190">
+				<p>
+					澳大利亚Health more - 河南康多多贸易有限公司 - 河南澳蜜电子商务有限公司 版权所有<br>
+					Copyright © 20015-2018 澳猫aumalls.com 版权所有, 豫ICP备15030837号-1
+				</p>
+				<div class="ALLN"></div>
+			</div>
+		</div>
+	</footer>
+	<script src="../js/jquery-1.7.2.min.js"></script>
+	<script src="../js/jquery.lazyload.min.js"></script>
+	<script src="../js/base.js"></script>
+	<script src="../js/brand_sukin.js"></script>
+	<script>
+		$(function () {
+			$(".SearchBtton").bind("click", function () {
+				try {
+					var value = $('.SearchBttonValue').val();
+					var key = value.replace(/</g, "").replace(/>/g, "");
+					goSearch($(this));
+
+				} catch (e) {
+
+				}
+			});
+		});
+		var solr_pecialchar_and = "specialchar_insteadof_andchar";
+
+		function goSearch($this) {
+			var key = $(".SearchBttonValue").val();
+			var url = $(this).data("url");
+			var lastChar = url.substr(url.length - 1); // => "1"
+			if (lastChar == '/') {
+				url = url.substr(0, url.length - 1);
+			}
+
+			if (key) {
+				key = key.replace("&", solr_pecialchar_and);
+				window.location.href = url + "/Store/Search/?q=" + key + "&crossStore=true";
+			} else {
+				window.location.href = url + "/Store/Search/?crossStore=true";
+			}
+		}
+	</script>
+</body>
+
+</html>
