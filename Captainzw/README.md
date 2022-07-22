@@ -132,11 +132,11 @@
 
 ### 总体设计
 
-**数据库设计：**用户地址address表、购物车cart表、商品goods表、订单orders表、订单详情orders_detail表、用户user表
+** 数据库设计：**用户地址address表、购物车cart表、商品goods表、订单orders表、订单详情orders_detail表、用户user表
 
-**前端页面设计：**注册页面、登录页面、商品选购页面、购物车界面、提交订单页面、支付页面、支付成功页面对应的html,css,js文件和image图片
+** 前端页面设计：**注册页面、登录页面、商品选购页面、购物车界面、提交订单页面、支付页面、支付成功页面对应的html,css,js文件和image图片
 
-**后端设计：**实体类Domain模块，控制层Controller模块，，持久层Dao模块，服务层Service模块
+** 后端设计：**实体类Domain模块，控制层Controller模块，，持久层Dao模块，服务层Service模块
 
 ### 概要设计
 
