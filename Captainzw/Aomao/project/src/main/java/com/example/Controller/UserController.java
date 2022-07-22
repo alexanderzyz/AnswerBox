@@ -4,6 +4,7 @@ import com.example.Domain.User;
 import com.example.Service.Impl.UserServiceImpl;
 import com.wf.captcha.SpecCaptcha;
 import com.wf.captcha.utils.CaptchaUtil;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,6 @@ public class UserController {
     private UserServiceImpl userService;
     @PostMapping("/queryRegister")
     public Result queryRegister(String phoneNumber){
-        System.out.println(phoneNumber);
         return new Result(Code.QUERYSUCCESS,userService.queryRegister(phoneNumber)?"true":"false","用户名重复了");
     }
     @PostMapping("/register")
@@ -54,7 +54,6 @@ public class UserController {
             if (login1 !=null){
                 Cookie cookie;
                 Cookie cookie1;
-                System.out.println(remember);
                 if (remember){
                     cookie = new Cookie("login", login);
                     cookie1 = new Cookie("password", password);
@@ -106,4 +105,5 @@ public class UserController {
             return new Result(Code.QUERYERROR, "");
         }
     }
+
 }

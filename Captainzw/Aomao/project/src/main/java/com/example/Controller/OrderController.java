@@ -81,8 +81,6 @@ public class OrderController {
     @PostMapping("/insertOrderDetail")
     public Result insertOrderDetail(String goodsId,String num,int orderId,HttpServletRequest req) {
         try {
-            System.out.println(goodsId);
-            System.out.println(num);
             JSONArray jsonArray = JSONArray.parseArray(goodsId);
             JSONArray jsonArray1 = JSONArray.parseArray(num);
             for (int i=0;i<jsonArray.size();i++){

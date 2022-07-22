@@ -249,12 +249,6 @@
 			</div>
 			<div class="OrderInAreadown">
 				<p class="left">
-					<span>
-						Blackmores EPo 月见草 750克 保税区直发 新郑保税仓发货
-					</span>
-					<span class="c99">
-						收货信息 : 河南省，郑州市，高新区，紫薇小区，马云，手机：155****6627
-					</span>
 				</p>
 				<a href="#" class="right">
 					我的订单 &gt;
@@ -279,7 +273,7 @@
 					<li class="clearfix">
 						<input type="radio" checked name="funct">
 						<p class="checkbox checked">
-							<img src="images/zhifubao.png" alt="">
+							<img src="../images/zhifubao.png" alt="">
 							<em></em>
 						</p>
 					</li>
@@ -369,7 +363,7 @@
 			<div class="Ileft">
 				<div class="er">
 					<div class="erPic">
-						<img src="images/WXe.png" alt="二维码">
+						<img src="../images/WXe.png" alt="二维码">
 					</div>
 					<span>扫码下载澳猫APP</span>
 				</div>
@@ -383,7 +377,7 @@
 								<strong>扫码加微信</strong>
 							</p>
 							<div class="wxe">
-								<img src="images/WXe.png" alt="二维码">
+								<img src="../images/WXe.png" alt="二维码">
 							</div>
 						</div>
 					</a>
@@ -442,6 +436,21 @@
 		$('#payButton').on('click', function () {
 			if (confirm("确认去结算吗") == true) {
 				window.location.href = "/pages/Cart-success.html"
+			}
+		})
+		$.ajax({
+			type: 'post',
+			url: '/orders/queryOrder',
+			data: '',
+			success: function (res) {
+				if (res.code == 20041) {
+					var obj = res.data
+					console.log(obj)
+					for (var i of obj) {
+						$('.OrderInAreadown p').append(`<span>${i.name}   单价：${i.price}  数量：${i.num}</span>`)
+					}
+					$('.way h3 b').text('￥' + obj[0].money)
+				}
 			}
 		})
 	</script>

@@ -1,5 +1,6 @@
 $(function () {
 	// 二级导航
+	$('.loginuser a span').eq(0).text('您好，' + window.localStorage.getItem("aomao-username"))
 	$('nav .navLi').hover(function () {
 		$(this).children('.NavEr').css('display', 'block');
 	}, function () {

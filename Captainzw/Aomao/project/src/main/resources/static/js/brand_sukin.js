@@ -1,5 +1,6 @@
 //require('jQuery')
 $(function () {
+	$('#username').text(window.localStorage.getItem('aomao-username'))
 	let cartCount = 0;
 	$.ajax({
 		type: 'post',

@@ -63,6 +63,7 @@ $(function () {
 				success: function (res) {
 					if (res.code == 20041) {
 						alert('登录成功')
+						window.localStorage.setItem("aomao-username", login.trim())
 						window.location.href = '/pages/brand_sukin_content.html'
 					} else {
 						$('#wrongInfo').text(res.msg)

@@ -177,7 +177,7 @@ $(function () {
 										}
 									}
 								})
-								alert("结算成功，前前往付款页面")
+								alert("结算成功，请前往付款页面")
 								window.location.href = "/pages/Cart-Indent.html"
 							}, 1000)
 						} else {

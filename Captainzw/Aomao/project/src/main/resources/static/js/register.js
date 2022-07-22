@@ -49,8 +49,14 @@ $(function () {
 		let inputCaptcha = $('#inputCaptcha').val();
 		let email = $('#email').val();
 		let registerJudge = (phoneNumber, password, ensurePassword) => {
+			$('#wrongInfo').hide()
 			if (phoneNumber == '' || phoneNumber == null) {
 				$('#wrongInfo').text('电话号码不能为空')
+				$('#wrongInfo').fadeIn()
+				return false
+			}
+			if (!/^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/.test(phoneNumber.trim())) {
+				$('#wrongInfo').text('电话号码不符合规范')
 				$('#wrongInfo').fadeIn()
 				return false
 			}
